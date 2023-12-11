@@ -44,7 +44,8 @@ p 10.9.ceil.class # => Integer
 
 puts
 
-# Returns a rounded-float object, if provided with an argument,
+# Automatically rounds up or down a number and returns an integer or rounded-float object.
+# If provided with an argument,
 # it returns the no. of decimal digits based on the argument.
 p 3.14159.round # => 3
 p 3.86.round # => 4
@@ -146,6 +147,8 @@ puts 20.between?(10, 15) # => false
 puts 20.between?(10, 20) # => true
 puts 20.between?(20, 30) # => true
 puts 20.between?(24, 45) # => false
+puts 20.between?(45, 20) # => false
+puts 11.between?(15, 10) # => false
 
 puts
 
@@ -162,15 +165,15 @@ puts -8.3.between?(-9.5, -7.2) # => true
 # Predicate Methods in Ruby
 puts "\nPredicate methods in Ruby: "
 
-puts 10.odd?
-puts 11.odd?
-puts 11.odd?.class
+puts 10.odd? # => false
+puts 11.odd? # => true
+puts 11.odd?.class # => TrueClass
 
 puts
 
-puts 1.even?
-puts 2.even?
-puts 1.even?.class
+puts 1.even? # => false
+puts 2.even? # => true
+puts 1.even?.class # => FalseClass
 
 puts
 
