@@ -22,11 +22,11 @@ introduce_myself # => Returns the puts statement of this method invocation.
 # Local variables in Ruby
 puts "\nLocal variables in Ruby: "
 
-hello = 5 # A local variable
+hello = 5 # A global variable
 action_star = "Jean Claude Van Damme" # A global variable
 
 def film_movie
-  action_star = "Arnold Schwarzenegger"
+  action_star = "Arnold Schwarzenegger" # A local variable
   puts action_star
 end
 
